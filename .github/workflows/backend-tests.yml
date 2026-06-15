@@ -35,7 +35,7 @@ jobs:
         run: |
           docker run -d --rm \
             --name qa-practice-api \
-            -p 8887:8080 \
+            -p 8887:8081 \
             rvancea/qa-practice-api:latest
 
       - name: Wait for API to be ready
