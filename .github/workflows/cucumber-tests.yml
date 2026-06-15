@@ -27,6 +27,10 @@ jobs:
       - name: Grant Execute Permissions
         run: chmod -R +x node_modules/.bin/
 
+      # 🟢 แปะเพิ่มตรงนี้: ติดตั้งเบราว์เซอร์เพื่อให้ Playwright ทำงานบนเครื่อง Linux ได้
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
       - name: Run Cucumber tests
         run: npm test # report.html ถูก generate อัตโนมัติ
 
