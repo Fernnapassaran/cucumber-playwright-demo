@@ -3,10 +3,6 @@ import axios, { AxiosResponse } from "axios";
 import assert from "assert";
 import testData from "../../../data/employees.json";
 
-//variables to store the base URL and the API response
-let baseURL: string;
-let response: AxiosResponse;
-
 function getTestData(keyPath: string): any {
   // Split the string by dots into an array of keys, then loop through them
   return keyPath.split(".").reduce((obj: any, key) => {
@@ -18,8 +14,8 @@ function getTestData(keyPath: string): any {
 //Background:
 //set base URL backend for API requests
 Given("the base URL is {string}", function (url: string) {
-  //save the URL into the 'baseURL' variable to use in other steps
-  baseURL = url;
+  //save the URL into the World instance to use in other steps
+  this.baseURL = url;
 });
 
 ///api/v1/employees///
@@ -30,10 +26,10 @@ When(
     const payload = getTestData(keyPath);
     try {
       //send the POST request with the data payload to the API
-      response = await axios.post(`${baseURL}${endpoint}`, payload);
+      this.response = await axios.post(`${this.baseURL}${endpoint}`, payload);
     } catch (error: any) {
       //save the error response if the request fails
-      response = error.response;
+      this.response = error.response;
     }
   },
 );
@@ -45,10 +41,10 @@ When(
   async function (endpoint: string) {
     try {
       //get to fetch data
-      response = await axios.get(`${baseURL}${endpoint}`);
+      this.response = await axios.get(`${this.baseURL}${endpoint}`);
     } catch (error: any) {
       //if the API returns an error, save it so the test can check it later
-      response = error.response;
+      this.response = error.response;
     }
   },
 );
@@ -58,7 +54,7 @@ Then(
   "the response status code should be {int}",
   function (expectedStatus: number) {
     //verify API response status with the expected status code
-    assert.strictEqual(response.status, expectedStatus);
+    assert.strictEqual(this.response.status, expectedStatus);
   },
 );
 
@@ -67,7 +63,7 @@ Then(
   "the response body message should be {string}",
   function (expectedMessage: string) {
     // Compare the actual text returned from the API with our expected message
-    assert.strictEqual(response.data, expectedMessage);
+    assert.strictEqual(this.response.data, expectedMessage);
   },
 );
 
@@ -77,7 +73,7 @@ Then(
   "the response errors defaultMessage should be {string}",
   function (expectedMessage: string) {
     //scan for the error message in the list (use [] if list is missing)
-    const found = (response.data.errors || []).some(
+    const found = (this.response.data.errors || []).some(
       (err: any) => err.defaultMessage === expectedMessage,
     );
     //pass if found, fail if not found
