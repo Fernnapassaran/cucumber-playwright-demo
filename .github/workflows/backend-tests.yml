@@ -40,21 +40,23 @@ jobs:
 
       - name: Wait for API to be ready
         run: |
-          sleep 10
-          for i in {1..30}; do
+          echo "Waiting for API..."
+          for i in {1..60}; do
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8887/api/v1/employees || echo "000")
             echo "Attempt $i - HTTP $STATUS"
             if [ "$STATUS" = "200" ]; then
               echo "API is ready!"
-              break
+              exit 0
             fi
-            sleep 3
+            sleep 5
           done
+          echo "API failed to start!"
+          docker logs qa-practice-api
+          exit 1
 
       - name: Run Backend API Tests
         run: npx cucumber-js --config cucumber.backend.js
         env:
-          # 🟢 ไม้ตายสุดท้าย: บังคับให้ Node 24 ค้นหา DNS เจอฝั่ง IPv4 (127.0.0.1) เป็นอันดับแรก ไม่หลงไป IPv6
           NODE_OPTIONS: "--dns-result-order=ipv4first"
 
       - name: Generate HTML Report
