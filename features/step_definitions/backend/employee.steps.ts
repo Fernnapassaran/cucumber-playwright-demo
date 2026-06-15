@@ -18,33 +18,37 @@ Given("the base URL is {string}", function (url: string) {
   this.baseURL = url;
 });
 
-///api/v1/employees///
 When(
   "the user sends POST request to {string} with data from {string}",
   async function (endpoint: string, keyPath: string) {
-    //get the test data (payload) from the file using keyPath
     const payload = getTestData(keyPath);
     try {
-      //send the POST request with the data payload to the API
       this.response = await axios.post(`${this.baseURL}${endpoint}`, payload);
     } catch (error: any) {
-      //save the error response if the request fails
-      this.response = error.response;
+      if (error.response) {
+        this.response = error.response;
+      } else {
+        throw new Error(
+          `Network error - cannot connect to ${this.baseURL}: ${error.message}`,
+        );
+      }
     }
   },
 );
 
-//api/v1/employees/{id}//
-// Send GET request with id from endpoint
 When(
   "the user sends GET request to {string}",
   async function (endpoint: string) {
     try {
-      //get to fetch data
       this.response = await axios.get(`${this.baseURL}${endpoint}`);
     } catch (error: any) {
-      //if the API returns an error, save it so the test can check it later
-      this.response = error.response;
+      if (error.response) {
+        this.response = error.response;
+      } else {
+        throw new Error(
+          `Network error - cannot connect to ${this.baseURL}: ${error.message}`,
+        );
+      }
     }
   },
 );
