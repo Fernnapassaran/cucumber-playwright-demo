@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Grant Execute Permissions
+        run: chmod -R +x node_modules/.bin/
+
       - name: Run Cucumber tests
         run: npm test # report.html ถูก generate อัตโนมัติ
 

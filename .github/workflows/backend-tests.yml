@@ -25,15 +25,19 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Grant Execute Permissions
+        run: chmod -R +x node_modules/.bin/ || true
+
       - name: Start QA Practice API
         run: |
           docker run -d --rm \
             --name qa-practice-api \
-            -p 8887:8081 \
+            -p 8887:8080 \
             rvancea/qa-practice-api:latest
 
       - name: Wait for API to be ready
         run: |
+          sleep 5
           for i in {1..30}; do
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8887/api/v1/employees)
             echo "Attempt $i - HTTP $STATUS"
@@ -44,7 +48,6 @@ jobs:
             sleep 2
           done
 
-      # ใช้ cucumber.backend.js ตรงกับ config ที่มีอยู่
       - name: Run Backend API Tests
         run: npx cucumber-js --config cucumber.backend.js
 
