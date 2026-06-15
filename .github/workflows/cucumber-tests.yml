@@ -27,31 +27,33 @@ jobs:
       - name: Grant Execute Permissions
         run: chmod -R +x node_modules/.bin/
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
       - name: Start QA Practice API
         run: |
           docker run -d --rm \
             --name qa-practice-api \
-            -p 8080:8080 \
+            -p 8887:8080 \
             rvancea/qa-practice-api:latest
 
       - name: Wait for API to be ready
         run: |
-          sleep 10
-          for i in {1..30}; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8887/api/v1/employees || echo "000")
+          echo "Waiting for API..."
+          for i in {1..60}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8887/api/v1/employees || echo "000")
             echo "Attempt $i - HTTP $STATUS"
             if [ "$STATUS" = "200" ]; then
               echo "API is ready!"
-              break
+              exit 0
             fi
-            sleep 3
+            sleep 5
           done
+          echo "API failed to start!"
+          docker logs qa-practice-api
+          exit 1
 
       - name: Run Cucumber tests
-        run: npm test # report.html ถูก generate อัตโนมัติ
+        run: npx cucumber-js --config cucumber.backend.js
+        env:
+          NODE_OPTIONS: "--dns-result-order=ipv4first"
 
       - name: Upload HTML Report
         if: always()
