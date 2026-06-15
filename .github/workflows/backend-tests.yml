@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
       - name: Grant Execute Permissions
         run: chmod -R +x node_modules/.bin/ || true
 
@@ -37,15 +40,15 @@ jobs:
 
       - name: Wait for API to be ready
         run: |
-          sleep 5
+
           for i in {1..30}; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8887/api/v1/employees)
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8887/api/v1/employees || echo "000")
             echo "Attempt $i - HTTP $STATUS"
             if [ "$STATUS" = "200" ]; then
               echo "API is ready!"
               break
             fi
-            sleep 2
+            sleep 3
           done
 
       - name: Run Backend API Tests

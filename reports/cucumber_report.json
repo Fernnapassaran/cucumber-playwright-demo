@@ -1,0 +1,904 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "employee-api;create-employee-with-valid-data-should-return-201",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Create employee with valid data should return 201",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3334414099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 257900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "the user sends POST request to \"/api/v1/employees\" with data from \"positive.createEmployee\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86971499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43989099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-api;create-employee-with-invalid-email-should-return-400-and-validate-defaultmessage",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Create employee with invalid email should return 400 and validate defaultMessage",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1827885299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 153800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user sends POST request to \"/api/v1/employees\" with data from \"negative.createEmployeeInvalidEmail\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22041000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 169899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the response errors defaultMessage should be \"must be a well-formed email address\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 275099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 40134000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-api;get-employee-by-existing-id-should-return-200",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Get employee by existing id should return 200",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1850460400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 319199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the user sends GET request to \"/api/v1/employees/1\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16697099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 117099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 40162700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-api;get-employee-by-non-existing-id-should-return-404-and-validate-message",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Get employee by non-existing id should return 404 and validate message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2087509900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "the user sends GET request to \"/api/v1/employees/9999\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12086299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "the response body message should be \"Employee not found with ID 9999\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42501100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "employee-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Employee API",
+    "tags": [],
+    "uri": "features\\backend\\employees.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login;login-with-valid--credentials",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login with valid  credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 133756899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1535946799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user logs in with username \"admin@admin.com\" and password \"admin123\"",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145408499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the user should see a shopping cart page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16799600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 84485699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 86699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132851599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1956143000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "the user logs in with username \"wrong@email.com\" and password \"wrongpass\"",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 140369200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the user should see \"Bad credentials! Please try again! Make sure that you've registered.\"",
+            "match": {
+              "location": "features\\step_definitions\\login.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 541899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 49010000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-input-shipping-details;user-submits-order-with-all-required-fields-and-validates-address",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "User submits order with all required fields and validates address",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1827273899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is logged in",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2417915099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the user has items in the cart",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69628300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user has proceeded to checkout",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4312300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "the user fills in shipping details from positive data",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93336900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the user should be able to submit the order successfully",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12423399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the address should be displayed correctly",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10924499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93137800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@shipping",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-input-shipping-details;user-submits-order-with-missing-required-fields",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "User submits order with missing required fields",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1796453700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is logged in",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2271691800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the user has items in the cart",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63285199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user has proceeded to checkout",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3165199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "the user fills in shipping details from negative data",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 290662099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the user should not be able to submit the order",
+            "match": {
+              "location": "features\\step_definitions\\shipping.details.steps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30862900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 61946700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-input-shipping-details",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User input shipping Details",
+    "tags": [],
+    "uri": "features\\shipping.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-shopping-cart;select-items-to-cart",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Select items to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2208306500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on the shopping cart page",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2347699399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user add items \"Dior J'adore\" and quantity \"2\"",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59585699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the user should see \"Dior J'adore add 2 unit Success\" in the cart",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14321100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44128300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@shopping",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-shopping-cart;select-items-to-cart",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Select items to cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1856903800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user is on the shopping cart page",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3102681399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "the user add items \"Gucci Bloom Eau de\" and quantity \"3\"",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55464200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the user should see \"Gucci Bloom Eau de add 3 unit Success\" in the cart",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15902000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44269500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@shopping",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-shopping-cart;total-cost-for-more-items",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Total Cost for more Items",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1824597900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "the user is on the shopping cart page",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2485516700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "the user add more items \"Dior J'adore, Gucci Bloom Eau de\" with price \"89.99, 79.99\" and quantity \"2, 3\"",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121853799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the summary total cost should be \"179.98, 239.97\" and \"419.95\"",
+            "match": {
+              "location": "features\\step_definitions\\shopping.cart.steps.ts:153"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28058400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 59025699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-shopping-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User shopping Cart",
+    "tags": [],
+    "uri": "features\\shopping.feature"
+  }
+]
