@@ -1,0 +1,73 @@
+name: Backend API Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  backend-api-tests:
+    name: Run Cucumber API Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start QA Practice API
+        run: |
+          docker run -d --rm \
+            --name qa-practice-api \
+            -p 8887:8081 \
+            rvancea/qa-practice-api:latest
+
+      - name: Wait for API to be ready
+        run: |
+          for i in {1..30}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8887/api/v1/employees)
+            echo "Attempt $i - HTTP $STATUS"
+            if [ "$STATUS" = "200" ]; then
+              echo "API is ready!"
+              break
+            fi
+            sleep 2
+          done
+
+      # ใช้ cucumber.backend.js ตรงกับ config ที่มีอยู่
+      - name: Run Backend API Tests
+        run: npx cucumber-js --config cucumber.backend.js
+
+      - name: Generate HTML Report
+        if: always()
+        run: node generate-report.js
+
+      - name: Upload HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: reports/backend-report.html
+          retention-days: 30
+
+      - name: Upload JSON Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-json-report
+          path: reports/backend-report.json
+          retention-days: 30
+
+      - name: Stop Docker container
+        if: always()
+        run: docker stop qa-practice-api || true

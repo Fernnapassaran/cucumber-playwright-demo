@@ -1,0 +1,26 @@
+{
+  "positive": {
+    "createEmployee": {
+      "dob": "1990-01-01",
+      "email": "john.doe@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "id": 0
+    },
+    "getEmployee": {
+      "id": 1
+    }
+  },
+  "negative": {
+    "createEmployeeInvalidEmail": {
+      "dob": "1990-01-01",
+      "email": "invalid-email",
+      "firstName": "John",
+      "lastName": "Doe",
+      "id": 0
+    },
+    "getEmployee": {
+      "id": 1
+    }
+  }
+}

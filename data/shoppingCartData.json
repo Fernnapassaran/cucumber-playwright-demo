@@ -1,0 +1,23 @@
+{
+  "selectItems": [
+    {
+      "itemsName": "Dior J'adore",
+      "quantity": "2",
+      "expectedResult": "Dior J'adore add 2 unit Success"
+    },
+    {
+      "itemsName": "Gucci Bloom Eau de",
+      "quantity": "3",
+      "expectedResult": "Gucci Bloom Eau de add 3 unit Success"
+    }
+  ],
+  "totalCost": [
+    {
+      "itemsList": "Dior J'adore, Gucci Bloom Eau de",
+      "priceList": "89.99, 79.99",
+      "quantitiesList": "2, 3",
+      "itemTotalList": "179.98, 239.97",
+      "summaryTotal": "419.95"
+    }
+  ]
+}

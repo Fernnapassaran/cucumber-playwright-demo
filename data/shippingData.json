@@ -1,0 +1,36 @@
+{
+  "positive": [
+    {
+      "phone": "0812345678",
+      "street": "5876 Little Streets",
+      "city": "London",
+      "country": "Thailand"
+    }
+  ],
+  "negative": [
+    {
+      "phone": "",
+      "street": "5876 Little Streets",
+      "city": "London",
+      "remark": "missing phone"
+    },
+    {
+      "phone": "0812345678",
+      "street": "",
+      "city": "London",
+      "remark": "missing street"
+    },
+    {
+      "phone": "0812345678",
+      "street": "5876 Little Streets",
+      "city": "",
+      "remark": "missing city"
+    },
+    {
+      "phone": "0812345678",
+      "street": "5876 Little Streets",
+      "city": "London",
+      "remark": "missing country"
+    }
+  ]
+}

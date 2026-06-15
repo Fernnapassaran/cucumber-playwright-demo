@@ -1,0 +1,35 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.2.339830261.1781532169",
+      "domain": ".razvanvancea.ro",
+      "path": "/",
+      "expires": 1816092169.258117,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.1257654835.1781532169",
+      "domain": ".razvanvancea.ro",
+      "path": "/",
+      "expires": 1781618569,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_gtag_UA_173643216_1",
+      "value": "1",
+      "domain": ".razvanvancea.ro",
+      "path": "/",
+      "expires": 1781532229,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
