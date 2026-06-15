@@ -27,9 +27,30 @@ jobs:
       - name: Grant Execute Permissions
         run: chmod -R +x node_modules/.bin/
 
-      # 🟢 แปะเพิ่มตรงนี้: ติดตั้งเบราว์เซอร์เพื่อให้ Playwright ทำงานบนเครื่อง Linux ได้
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+
+      # 🟢 เพิ่มสเต็ป: เปิด Docker API มารองรับเทสฝั่ง Backend
+      - name: Start QA Practice API
+        run: |
+          docker run -d --rm \
+            --name qa-practice-api \
+            -p 8887:8080 \
+            rvancea/qa-practice-api:latest
+
+      # 🟢 เพิ่มสเต็ป: รอให้ API บูทเสร็จก่อน เพื่อไม่ให้สคริปต์ระเบิด
+      - name: Wait for API to be ready
+        run: |
+          sleep 10
+          for i in {1..30}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8887/api/v1/employees || echo "000")
+            echo "Attempt $i - HTTP $STATUS"
+            if [ "$STATUS" = "200" ]; then
+              echo "API is ready!"
+              break
+            fi
+            sleep 3
+          done
 
       - name: Run Cucumber tests
         run: npm test # report.html ถูก generate อัตโนมัติ
@@ -41,3 +62,8 @@ jobs:
           name: cucumber-html-report
           path: reports/report.html
           retention-days: 30
+
+      # 🟢 เพิ่มสเต็ป: สั่งปิดและเคลียร์ตู้คอนเทนเนอร์ Docker เมื่อรันเสร็จเรียบร้อย
+      - name: Stop Docker container
+        if: always()
+        run: docker stop qa-practice-api || true
