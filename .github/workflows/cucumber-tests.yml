@@ -30,15 +30,13 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      # 🟢 เพิ่มสเต็ป: เปิด Docker API มารองรับเทสฝั่ง Backend
       - name: Start QA Practice API
         run: |
           docker run -d --rm \
             --name qa-practice-api \
-            -p 8887:8080 \
+            -p 8080:8080 \
             rvancea/qa-practice-api:latest
 
-      # 🟢 เพิ่มสเต็ป: รอให้ API บูทเสร็จก่อน เพื่อไม่ให้สคริปต์ระเบิด
       - name: Wait for API to be ready
         run: |
           sleep 10
@@ -63,7 +61,6 @@ jobs:
           path: reports/report.html
           retention-days: 30
 
-      # 🟢 เพิ่มสเต็ป: สั่งปิดและเคลียร์ตู้คอนเทนเนอร์ Docker เมื่อรันเสร็จเรียบร้อย
       - name: Stop Docker container
         if: always()
         run: docker stop qa-practice-api || true

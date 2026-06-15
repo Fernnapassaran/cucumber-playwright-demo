@@ -53,6 +53,10 @@ jobs:
 
       - name: Run Backend API Tests
         run: npx cucumber-js --config cucumber.backend.js
+        env:
+          BASE_URL: http://127.0.0.1:8887
+          API_URL: http://127.0.0.1:8887
+          URL: http://127.0.0.1:8887
 
       - name: Generate HTML Report
         if: always()
