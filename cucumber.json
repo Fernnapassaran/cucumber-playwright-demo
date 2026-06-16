@@ -3,7 +3,7 @@
     "formatOptions": {
       "snippetInterface": "async-await"
     },
-    "paths": ["features/**/*.feature"],
+    "paths": ["features/frontend/*.feature", "features/backend/*.feature"],
     "requireModule": ["ts-node/register"],
     "require": [
       "features/support/**/*.ts",
