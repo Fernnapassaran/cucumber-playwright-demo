@@ -15,11 +15,11 @@
             "line": 4,
             "name": "the base URL is \"http://localhost:8887\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 493899
+              "duration": 509099
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 9,
             "name": "the user sends POST request to \"/api/v1/employees\" with data from \"positive.createEmployee\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:26"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 46707799
+              "duration": 54464300
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 224000
+              "duration": 243300
             }
           }
         ],
@@ -65,11 +65,11 @@
             "line": 4,
             "name": "the base URL is \"http://localhost:8887\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 148400
+              "duration": 82600
             }
           },
           {
@@ -78,11 +78,11 @@
             "line": 14,
             "name": "the user sends POST request to \"/api/v1/employees\" with data from \"negative.createEmployeeInvalidEmail\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:26"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 16921900
+              "duration": 27301500
             }
           },
           {
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 102000
+              "duration": 115999
             }
           },
           {
@@ -108,7 +108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 265399
+              "duration": 179100
             }
           }
         ],
@@ -128,11 +128,11 @@
             "line": 4,
             "name": "the base URL is \"http://localhost:8887\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 113500
+              "duration": 71199
             }
           },
           {
@@ -141,11 +141,11 @@
             "line": 21,
             "name": "the user sends GET request to \"/api/v1/employees/1\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:43"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 14803599
+              "duration": 15607199
             }
           },
           {
@@ -158,7 +158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 163700
+              "duration": 108199
             }
           }
         ],
@@ -178,11 +178,11 @@
             "line": 4,
             "name": "the base URL is \"http://localhost:8887\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 92900
+              "duration": 67900
             }
           },
           {
@@ -191,11 +191,11 @@
             "line": 26,
             "name": "the user sends GET request to \"/api/v1/employees/9999\"",
             "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:43"
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:39"
             },
             "result": {
               "status": "passed",
-              "duration": 10967999
+              "duration": 9628699
             }
           },
           {
@@ -208,7 +208,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 118599
+              "duration": 155199
             }
           },
           {
@@ -221,7 +221,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 220499
+              "duration": 221699
             }
           }
         ],

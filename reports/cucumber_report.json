@@ -4,307 +4,6 @@
     "elements": [
       {
         "description": "",
-        "id": "employee-api;create-employee-with-valid-data-should-return-201",
-        "keyword": "Scenario",
-        "line": 8,
-        "name": "Create employee with valid data should return 201",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 3334414099
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the base URL is \"http://localhost:8887\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 257900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "the user sends POST request to \"/api/v1/employees\" with data from \"positive.createEmployee\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 86971499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "the response status code should be 201",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 171200
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 43989099
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "employee-api;create-employee-with-invalid-email-should-return-400-and-validate-defaultmessage",
-        "keyword": "Scenario",
-        "line": 13,
-        "name": "Create employee with invalid email should return 400 and validate defaultMessage",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1827885299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the base URL is \"http://localhost:8887\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 153800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "the user sends POST request to \"/api/v1/employees\" with data from \"negative.createEmployeeInvalidEmail\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22041000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "the response status code should be 400",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 169899
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 16,
-            "name": "the response errors defaultMessage should be \"must be a well-formed email address\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:76"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 275099
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 40134000
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "employee-api;get-employee-by-existing-id-should-return-200",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Get employee by existing id should return 200",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1850460400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the base URL is \"http://localhost:8887\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 319199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 21,
-            "name": "the user sends GET request to \"/api/v1/employees/1\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:43"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 16697099
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 22,
-            "name": "the response status code should be 200",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 117099
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 40162700
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "employee-api;get-employee-by-non-existing-id-should-return-404-and-validate-message",
-        "keyword": "Scenario",
-        "line": 25,
-        "name": "Get employee by non-existing id should return 404 and validate message",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 2087509900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the base URL is \"http://localhost:8887\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 199399
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 26,
-            "name": "the user sends GET request to \"/api/v1/employees/9999\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:43"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 12086299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 27,
-            "name": "the response status code should be 404",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 60400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 28,
-            "name": "the response body message should be \"Employee not found with ID 9999\"",
-            "match": {
-              "location": "features\\step_definitions\\backend\\employee.steps.ts:66"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 94900
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 42501100
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "employee-api",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Employee API",
-    "tags": [],
-    "uri": "features\\backend\\employees.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
         "id": "user-login;login-with-valid--credentials",
         "keyword": "Scenario",
         "line": 4,
@@ -315,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 132799
+              "duration": 639500
             }
           },
           {
@@ -323,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 133756899
+              "duration": 1241874499
             }
           },
           {
@@ -336,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1535946799
+              "duration": 1681002400
             }
           },
           {
@@ -349,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 145408499
+              "duration": 241114300
             }
           },
           {
@@ -362,7 +61,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16799600
+              "duration": 18538599
             }
           },
           {
@@ -370,7 +69,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 84485699
+              "duration": 74935599
             }
           }
         ],
@@ -394,7 +93,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 86699
+              "duration": 94000
             }
           },
           {
@@ -402,7 +101,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 132851599
+              "duration": 137930800
             }
           },
           {
@@ -415,7 +114,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1956143000
+              "duration": 1315519999
             }
           },
           {
@@ -428,7 +127,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 140369200
+              "duration": 147194599
             }
           },
           {
@@ -441,7 +140,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 541899
+              "duration": 384000
             }
           },
           {
@@ -449,7 +148,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49010000
+              "duration": 46926899
             }
           }
         ],
@@ -484,7 +183,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1827273899
+              "duration": 1781923699
             }
           },
           {
@@ -497,7 +196,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2417915099
+              "duration": 2081882200
             }
           },
           {
@@ -510,7 +209,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 69628300
+              "duration": 73466399
             }
           },
           {
@@ -523,7 +222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4312300
+              "duration": 4424800
             }
           },
           {
@@ -536,7 +235,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93336900
+              "duration": 81855199
             }
           },
           {
@@ -549,7 +248,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12423399
+              "duration": 11590699
             }
           },
           {
@@ -562,7 +261,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10924499
+              "duration": 3443400
             }
           },
           {
@@ -570,7 +269,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 93137800
+              "duration": 58330300
             }
           }
         ],
@@ -594,7 +293,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1796453700
+              "duration": 1783314000
             }
           },
           {
@@ -607,7 +306,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2271691800
+              "duration": 2042352600
             }
           },
           {
@@ -620,7 +319,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 63285199
+              "duration": 63230099
             }
           },
           {
@@ -633,7 +332,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3165199
+              "duration": 3429799
             }
           },
           {
@@ -646,7 +345,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 290662099
+              "duration": 309228599
             }
           },
           {
@@ -659,7 +358,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30862900
+              "duration": 30739700
             }
           },
           {
@@ -667,7 +366,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 61946700
+              "duration": 55554700
             }
           }
         ],
@@ -697,7 +396,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2208306500
+              "duration": 2082557800
             }
           },
           {
@@ -710,7 +409,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2347699399
+              "duration": 2699547299
             }
           },
           {
@@ -723,7 +422,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 59585699
+              "duration": 54550999
             }
           },
           {
@@ -736,7 +435,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14321100
+              "duration": 16213900
             }
           },
           {
@@ -744,7 +443,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44128300
+              "duration": 43845600
             }
           }
         ],
@@ -768,7 +467,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1856903800
+              "duration": 1759547800
             }
           },
           {
@@ -781,7 +480,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3102681399
+              "duration": 2124589100
             }
           },
           {
@@ -794,7 +493,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55464200
+              "duration": 55211599
             }
           },
           {
@@ -807,7 +506,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15902000
+              "duration": 13711599
             }
           },
           {
@@ -815,7 +514,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44269500
+              "duration": 52896899
             }
           }
         ],
@@ -839,7 +538,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1824597900
+              "duration": 1736633900
             }
           },
           {
@@ -852,7 +551,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2485516700
+              "duration": 2062192499
             }
           },
           {
@@ -865,7 +564,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 121853799
+              "duration": 92479699
             }
           },
           {
@@ -878,7 +577,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28058400
+              "duration": 29537499
             }
           },
           {
@@ -886,7 +585,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 59025699
+              "duration": 50908499
             }
           }
         ],
@@ -900,5 +599,306 @@
     "name": "User shopping Cart",
     "tags": [],
     "uri": "features\\shopping.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "employee-api;create-employee-with-valid-data-should-return-201",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Create employee with valid data should return 201",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1760130900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 259799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "the user sends POST request to \"/api/v1/employees\" with data from \"positive.createEmployee\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152715400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 40638999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-api;create-employee-with-invalid-email-should-return-400-and-validate-defaultmessage",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Create employee with invalid email should return 400 and validate defaultMessage",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1828980400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user sends POST request to \"/api/v1/employees\" with data from \"negative.createEmployeeInvalidEmail\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33434399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the response errors defaultMessage should be \"must be a well-formed email address\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152030599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-api;get-employee-by-existing-id-should-return-200",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Get employee by existing id should return 200",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1748078900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the user sends GET request to \"/api/v1/employees/1\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20767299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 162770599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "employee-api;get-employee-by-non-existing-id-should-return-404-and-validate-message",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Get employee by non-existing id should return 404 and validate message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1733772599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the base URL is \"http://localhost:8887\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "the user sends GET request to \"/api/v1/employees/9999\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10182999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "the response body message should be \"Employee not found with ID 9999\"",
+            "match": {
+              "location": "features\\step_definitions\\backend\\employee.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 39752000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "employee-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Employee API",
+    "tags": [],
+    "uri": "features\\backend\\employees.feature"
   }
 ]
