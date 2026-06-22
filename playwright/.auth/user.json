@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "_ga",
-      "value": "GA1.2.1308731036.1782102577",
+      "value": "GA1.2.1740667243.1782103377",
       "domain": ".razvanvancea.ro",
       "path": "/",
-      "expires": 1816662576.913999,
+      "expires": 1816663376.895317,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_gid",
-      "value": "GA1.2.1939963947.1782102577",
+      "value": "GA1.2.1841102917.1782103377",
       "domain": ".razvanvancea.ro",
       "path": "/",
-      "expires": 1782188976,
+      "expires": 1782189776,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -25,7 +25,7 @@
       "value": "1",
       "domain": ".razvanvancea.ro",
       "path": "/",
-      "expires": 1782102636,
+      "expires": 1782103436,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"

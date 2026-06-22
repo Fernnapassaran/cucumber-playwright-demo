@@ -1,0 +1,4 @@
+reports/** linguist-generated=true
+reports/** linguist-vendored=true
+node_modules/** linguist-vendored=true
+*.html linguist-detectable=false
