@@ -1,10 +1,10 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-import { LoginPage } from "../../pages/LoginPage";
-import { ShoppingCartPage } from "../../pages/ShoppingCartPage";
-import { ShippingDetailsPage } from "../../pages/ShippingDetailsPage";
-import shippingData from "../../data/shippingData.json";
-import shoppingCartData from "../../data/shoppingCartData.json";
+import { LoginPage } from "../../../pages/LoginPage";
+import { ShoppingCartPage } from "../../../pages/ShoppingCartPage";
+import { ShippingDetailsPage } from "../../../pages/ShippingDetailsPage";
+import shippingData from "../../../data/shippingData.json";
+import shoppingCartData from "../../../data/shoppingCartData.json";
 
 //Background//
 Given("the user is logged in", async function () {

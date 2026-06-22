@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 627500
+              "duration": 558199
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 169214300
+              "duration": 203611599
             }
           },
           {
@@ -31,11 +31,11 @@
             "line": 5,
             "name": "the user is on the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.ts:7"
+              "location": "features\\step_definitions\\frontend\\login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1334766500
+              "duration": 2059109899
             }
           },
           {
@@ -44,11 +44,11 @@
             "line": 6,
             "name": "the user logs in with username \"admin@admin.com\" and password \"admin123\"",
             "match": {
-              "location": "features\\step_definitions\\login.steps.ts:12"
+              "location": "features\\step_definitions\\frontend\\login.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 174370699
+              "duration": 240365099
             }
           },
           {
@@ -57,11 +57,11 @@
             "line": 7,
             "name": "the user should see a shopping cart page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.ts:19"
+              "location": "features\\step_definitions\\frontend\\login.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 14570700
+              "duration": 33676600
             }
           },
           {
@@ -69,7 +69,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60565399
+              "duration": 167803100
             }
           }
         ],
@@ -93,7 +93,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 137699
+              "duration": 156699
             }
           },
           {
@@ -101,7 +101,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 139585999
+              "duration": 172213499
             }
           },
           {
@@ -110,11 +110,11 @@
             "line": 11,
             "name": "the user is on the login page",
             "match": {
-              "location": "features\\step_definitions\\login.steps.ts:7"
+              "location": "features\\step_definitions\\frontend\\login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1326651700
+              "duration": 1809005599
             }
           },
           {
@@ -123,11 +123,11 @@
             "line": 12,
             "name": "the user logs in with username \"wrong@email.com\" and password \"wrongpass\"",
             "match": {
-              "location": "features\\step_definitions\\login.steps.ts:12"
+              "location": "features\\step_definitions\\frontend\\login.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 165136800
+              "duration": 165619800
             }
           },
           {
@@ -136,11 +136,11 @@
             "line": 13,
             "name": "the user should see \"Bad credentials! Please try again! Make sure that you've registered.\"",
             "match": {
-              "location": "features\\step_definitions\\login.steps.ts:26"
+              "location": "features\\step_definitions\\frontend\\login.steps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 536999
+              "duration": 572200
             }
           },
           {
@@ -148,7 +148,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44798799
+              "duration": 56399400
             }
           }
         ],
@@ -183,7 +183,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1795039300
+              "duration": 2365390899
             }
           },
           {
@@ -192,11 +192,11 @@
             "line": 4,
             "name": "the user is logged in",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:10"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:10"
             },
             "result": {
               "status": "passed",
-              "duration": 2265580100
+              "duration": 2697254499
             }
           },
           {
@@ -205,11 +205,11 @@
             "line": 5,
             "name": "the user has items in the cart",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:19"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 69367599
+              "duration": 82890400
             }
           },
           {
@@ -218,11 +218,11 @@
             "line": 6,
             "name": "the user has proceeded to checkout",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:31"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 3686300
+              "duration": 4026499
             }
           },
           {
@@ -231,11 +231,11 @@
             "line": 11,
             "name": "the user fills in shipping details from positive data",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:37"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 76761000
+              "duration": 82343499
             }
           },
           {
@@ -244,11 +244,11 @@
             "line": 12,
             "name": "the user should be able to submit the order successfully",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:66"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:66"
             },
             "result": {
               "status": "passed",
-              "duration": 11619699
+              "duration": 21581199
             }
           },
           {
@@ -257,11 +257,11 @@
             "line": 13,
             "name": "the address should be displayed correctly",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:76"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:76"
             },
             "result": {
               "status": "passed",
-              "duration": 3207800
+              "duration": 6984200
             }
           },
           {
@@ -269,7 +269,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51454800
+              "duration": 58803200
             }
           }
         ],
@@ -293,7 +293,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1745211500
+              "duration": 2682680599
             }
           },
           {
@@ -302,11 +302,11 @@
             "line": 4,
             "name": "the user is logged in",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:10"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:10"
             },
             "result": {
               "status": "passed",
-              "duration": 2052631299
+              "duration": 2616794199
             }
           },
           {
@@ -315,11 +315,11 @@
             "line": 5,
             "name": "the user has items in the cart",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:19"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 68298399
+              "duration": 81527799
             }
           },
           {
@@ -328,11 +328,11 @@
             "line": 6,
             "name": "the user has proceeded to checkout",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:31"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 3204499
+              "duration": 4154999
             }
           },
           {
@@ -341,11 +341,11 @@
             "line": 17,
             "name": "the user fills in shipping details from negative data",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:51"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:51"
             },
             "result": {
               "status": "passed",
-              "duration": 291885800
+              "duration": 358644799
             }
           },
           {
@@ -354,11 +354,11 @@
             "line": 18,
             "name": "the user should not be able to submit the order",
             "match": {
-              "location": "features\\step_definitions\\shipping.details.steps.ts:87"
+              "location": "features\\step_definitions\\frontend\\shipping.details.steps.ts:87"
             },
             "result": {
               "status": "passed",
-              "duration": 29660400
+              "duration": 85175100
             }
           },
           {
@@ -366,7 +366,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 58578000
+              "duration": 109336500
             }
           }
         ],
@@ -396,7 +396,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1764087299
+              "duration": 2459911100
             }
           },
           {
@@ -405,11 +405,11 @@
             "line": 5,
             "name": "the user is on the shopping cart page",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:8"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2106894000
+              "duration": 2603458599
             }
           },
           {
@@ -418,11 +418,11 @@
             "line": 6,
             "name": "the user add items \"Dior J'adore\" and quantity \"2\"",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:21"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 58023699
+              "duration": 69885699
             }
           },
           {
@@ -431,11 +431,11 @@
             "line": 7,
             "name": "the user should see \"Dior J'adore add 2 unit Success\" in the cart",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:127"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 18396000
+              "duration": 20012399
             }
           },
           {
@@ -443,7 +443,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46361899
+              "duration": 51026700
             }
           }
         ],
@@ -467,7 +467,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1762781200
+              "duration": 2420506900
             }
           },
           {
@@ -476,11 +476,11 @@
             "line": 5,
             "name": "the user is on the shopping cart page",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:8"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2098615699
+              "duration": 2614148799
             }
           },
           {
@@ -489,11 +489,11 @@
             "line": 6,
             "name": "the user add items \"Gucci Bloom Eau de\" and quantity \"3\"",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:21"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:21"
             },
             "result": {
               "status": "passed",
-              "duration": 63154500
+              "duration": 63582900
             }
           },
           {
@@ -502,11 +502,11 @@
             "line": 7,
             "name": "the user should see \"Gucci Bloom Eau de add 3 unit Success\" in the cart",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:127"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 15378300
+              "duration": 17941699
             }
           },
           {
@@ -514,7 +514,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44307800
+              "duration": 49708999
             }
           }
         ],
@@ -538,7 +538,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1726996999
+              "duration": 2335585100
             }
           },
           {
@@ -547,11 +547,11 @@
             "line": 15,
             "name": "the user is on the shopping cart page",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:8"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 2089940600
+              "duration": 2606019700
             }
           },
           {
@@ -560,11 +560,11 @@
             "line": 16,
             "name": "the user add more items \"Dior J'adore, Gucci Bloom Eau de\" with price \"89.99, 79.99\" and quantity \"2, 3\"",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:60"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:60"
             },
             "result": {
               "status": "passed",
-              "duration": 122800599
+              "duration": 154159699
             }
           },
           {
@@ -573,11 +573,11 @@
             "line": 17,
             "name": "the summary total cost should be \"179.98, 239.97\" and \"419.95\"",
             "match": {
-              "location": "features\\step_definitions\\shopping.cart.steps.ts:153"
+              "location": "features\\step_definitions\\frontend\\shopping.cart.steps.ts:153"
             },
             "result": {
               "status": "passed",
-              "duration": 27818299
+              "duration": 32258399
             }
           },
           {
@@ -585,7 +585,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 52865700
+              "duration": 81232099
             }
           }
         ],
@@ -615,7 +615,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1750556300
+              "duration": 2175365900
             }
           },
           {
@@ -628,7 +628,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 271600
+              "duration": 167500
             }
           },
           {
@@ -641,7 +641,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31857499
+              "duration": 536496500
             }
           },
           {
@@ -654,7 +654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 232899
+              "duration": 442699
             }
           },
           {
@@ -662,7 +662,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43649900
+              "duration": 62876100
             }
           }
         ],
@@ -681,7 +681,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1735786700
+              "duration": 2321314700
             }
           },
           {
@@ -694,7 +694,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 119699
+              "duration": 113100
             }
           },
           {
@@ -707,7 +707,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21176499
+              "duration": 119196199
             }
           },
           {
@@ -720,7 +720,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80200
+              "duration": 126300
             }
           },
           {
@@ -733,7 +733,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 152899
+              "duration": 158899
             }
           },
           {
@@ -741,7 +741,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39422200
+              "duration": 47627599
             }
           }
         ],
@@ -760,7 +760,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1741092199
+              "duration": 2398081500
             }
           },
           {
@@ -773,7 +773,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 90999
+              "duration": 102799
             }
           },
           {
@@ -786,7 +786,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10625700
+              "duration": 41163699
             }
           },
           {
@@ -799,7 +799,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 66200
+              "duration": 104299
             }
           },
           {
@@ -807,7 +807,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39874800
+              "duration": 43361300
             }
           }
         ],
@@ -826,7 +826,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1743914000
+              "duration": 2394340599
             }
           },
           {
@@ -839,7 +839,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 104799
+              "duration": 98699
             }
           },
           {
@@ -852,7 +852,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7928599
+              "duration": 11094800
             }
           },
           {
@@ -865,7 +865,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 83500
+              "duration": 95600
             }
           },
           {
@@ -878,7 +878,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93400
+              "duration": 102800
             }
           },
           {
@@ -886,7 +886,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39198499
+              "duration": 39460200
             }
           }
         ],

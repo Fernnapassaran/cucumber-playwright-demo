@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-import { LoginPage } from "../../pages/LoginPage";
-import { ShoppingCartPage } from "../../pages/ShoppingCartPage";
+import { LoginPage } from "../../../pages/LoginPage";
+import { ShoppingCartPage } from "../../../pages/ShoppingCartPage";
 
 //Select items to cart//
 //go to the website
